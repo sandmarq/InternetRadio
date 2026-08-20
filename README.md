@@ -85,6 +85,17 @@ config.example.ini Exemple de configuration sans secret
 Les fichiers générés par PlatformIO et les configurations locales sont exclus
 du dépôt par [.gitignore](.gitignore).
 
+## Licence
+
+Le code original de ce projet est distribué sous licence **GNU GPL v3**.
+Consulter [LICENSE](LICENSE) pour le texte complet.
+
+Cette licence est notamment nécessaire pour rester compatible avec la
+bibliothèque `ESP32-audioI2S`, utilisée par le firmware. Les licences des
+composants tiers sont récapitulées dans
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), et les notices présentes dans
+les fichiers tiers ou dans le code source doivent être conservées.
+
 ## Sécurité
 
 Ne jamais publier dans Git :
