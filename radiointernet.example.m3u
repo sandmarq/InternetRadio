@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1,Station exemple 1
+https://example.com/radio/station-1.mp3
+#EXTINF:-1,Station exemple 2
+https://example.com/radio/station-2.mp3

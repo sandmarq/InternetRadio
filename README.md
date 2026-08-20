@@ -69,6 +69,30 @@ Les listes de stations sont également stockées sur la carte SD :
 - `favoris.m3u` pour les stations favorites.
 - `/MP3s` pour les fichiers audio locaux.
 
+Des modèles compatibles sont fournis dans
+[radiointernet.example.m3u](radiointernet.example.m3u) et
+[favoris.example.m3u](favoris.example.m3u). Les URLs qu'ils contiennent sont
+fictives : il faut les remplacer par les URLs des flux radio souhaités.
+
+Le format attendu est celui-ci :
+
+```m3u
+#EXTM3U
+#EXTINF:-1,Nom de la station
+https://exemple.org/flux-radio.mp3
+```
+
+Pour préparer une carte SD, copier les modèles en les renommant ainsi, puis
+remplacer leurs URLs :
+
+```text
+radiointernet.example.m3u -> radiointernet.m3u
+favoris.example.m3u       -> favoris.m3u
+```
+
+Une station est ajoutée aux favoris depuis l'écran tactile. Le firmware met
+alors à jour `favoris.m3u` en conservant les lignes `#EXTINF` et leurs URLs.
+
 Si aucun réseau configuré n'est détecté, connecter un téléphone ou un ordinateur
 au Wi-Fi `Radio_Config`, puis ouvrir `http://192.168.4.1`.
 
@@ -80,6 +104,8 @@ src/es8311.*       Pilote du codec audio ES8311
 include/lv_conf.h  Configuration LVGL
 platformio.ini     Configuration PlatformIO
 config.example.ini Exemple de configuration sans secret
+radiointernet.example.m3u Modèle de liste de stations
+favoris.example.m3u       Modèle de liste de favoris
 ```
 
 Les fichiers générés par PlatformIO et les configurations locales sont exclus
